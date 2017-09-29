@@ -289,6 +289,8 @@ public abstract class AbstractXSDToJavaMojo extends AbstractMojo {
     }
     
     private List<File> resolve(String artifactDescriptor) throws MojoExecutionException {
+        getLog().info("Resolving: " + artifactDescriptor);
+
         String[] s = artifactDescriptor.split(":");
 
         String type = s.length >= 4 ? s[3] : "jar";
