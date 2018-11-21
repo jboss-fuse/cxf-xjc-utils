@@ -56,6 +56,18 @@
 			<artifactId>core</artifactId>
 			<version>3.3.0-v_771</version>
 			<scope>test</scope>
+			<exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.core</groupId>
+                    <artifactId>filesystem</artifactId>
+                </exclusion>
+			</exclusions>
+        </dependency>
+        <dependency>
+			<groupId>org.eclipse.core</groupId>
+			<artifactId>resources</artifactId>
+			<version>3.3.0-v20070604</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.cedarsoft.commons</groupId>

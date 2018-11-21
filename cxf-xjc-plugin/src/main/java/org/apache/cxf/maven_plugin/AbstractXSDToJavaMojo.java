@@ -329,6 +329,7 @@ public abstract class AbstractXSDToJavaMojo extends AbstractMojo {
     }
 
     private Set<File> resolve(String artifactDescriptor) throws MojoExecutionException, RepositoryException {
+        getLog().info("Resolving: " + artifactDescriptor);
         final Set<File> files = new HashSet<File>();
         for (ArtifactResult artifactResult : repository
                 .resolveDependencies(repoSession,
