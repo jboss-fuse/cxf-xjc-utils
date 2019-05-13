@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Licensed to the Apache Software Foundation (ASF) under one
   or more contributor license agreements. See the NOTICE file
@@ -27,7 +28,7 @@
     <parent>
         <groupId>org.apache.cxf.xjc-utils</groupId>
         <artifactId>xjc-utils</artifactId>
-        <version>3.2.4-SNAPSHOT</version>
+        <version>3.2.4.fuse-preprod-740008-redhat-00001</version>
     </parent>
 
     <dependencies>
