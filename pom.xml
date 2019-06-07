@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Licensed to the Apache Software Foundation (ASF) under one
   or more contributor license agreements. See the NOTICE file
@@ -21,14 +22,14 @@
     <groupId>org.apache.cxf.xjc-utils</groupId>
     <artifactId>xjc-utils</artifactId>
     <packaging>pom</packaging>
-    <version>3.2.4.fuse-740009</version>
+    <version>3.2.4.fuse-740009-redhat-00001</version>
     <name>Apache CXF XJC Utils</name>
     <url>http://cxf.apache.org</url>
 
     <parent>
         <groupId>org.apache</groupId>
         <artifactId>apache</artifactId>
-        <version>21</version>
+        <version>21.0.0.redhat-00001</version>
     </parent>
     <scm>
       <connection>scm:git:https://gitbox.apache.org/repos/asf/cxf-xjc-utils.git</connection>
@@ -46,14 +47,14 @@
     <properties>
         <cxf-buildtools-version>3.4.1</cxf-buildtools-version>
         <jdk.version>1.8</jdk.version>
-        <jaxb-version>2.2.11</jaxb-version>
+        <jaxb-version>2.2.11.redhat-4</jaxb-version>
 
         <eclipse.outputDirectory>${basedir}/target/classes</eclipse.outputDirectory>
         <downloadSources>true</downloadSources>
 
         <pmd.eclipse.ruleset>cxf-pmd-ruleset.xml</pmd.eclipse.ruleset>
-        <resources.base.path />
-        <checkstyle.extension />
+        <resources.base.path></resources.base.path>
+        <checkstyle.extension></checkstyle.extension>
     </properties>
 
     <modules>
@@ -72,19 +73,6 @@
         <module>javadoc</module>
         <module>runtime</module>
     </modules>
-    <repositories>
-         <repository>
-             <id>apache.snapshots</id>
-             <url>http://repository.apache.org/snapshots/</url>
-             <name>Apache Snapshot Repo</name>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository> 
-    </repositories>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -110,7 +98,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>4.12.0.redhat-003</version>
             </dependency>
             <dependency>
                 <groupId>jaxme</groupId>
@@ -120,27 +108,27 @@
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-plugin-api</artifactId>
-                <version>3.3.3</version>
+                <version>3.3.3.redhat-1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-core</artifactId>
-                <version>3.3.3</version>
+                <version>3.3.3.redhat-1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-compat</artifactId>
-                <version>3.3.3</version>
+                <version>3.3.3.redhat-1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.6</version>
+                <version>3.6.0.redhat-1</version>
             </dependency>
             <dependency>
                 <groupId>wsdl4j</groupId>
                 <artifactId>wsdl4j</artifactId>
-                <version>1.6.3</version>
+                <version>1.6.3.redhat-2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -202,6 +190,20 @@
                  <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-pmd-plugin</artifactId>
             </plugin>
+            <plugin>
+        <groupId>org.commonjava.maven.plugins</groupId>
+        <artifactId>project-sources-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <id>project-sources-archive</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>archive</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -467,59 +469,41 @@
                 			<pluginExecutions>
                 				<pluginExecution>
                 					<pluginExecutionFilter>
-                						<groupId>
-                							org.apache.maven.plugins
-                						</groupId>
-                						<artifactId>
-                							maven-checkstyle-plugin
-                						</artifactId>
-                						<versionRange>
-                							[2.9.1,)
-                						</versionRange>
+                						<groupId>org.apache.maven.plugins</groupId>
+                						<artifactId>maven-checkstyle-plugin</artifactId>
+                						<versionRange>[2.9.1,)</versionRange>
                 						<goals>
                 							<goal>checkstyle</goal>
                 						</goals>
                 					</pluginExecutionFilter>
                 					<action>
-                						<ignore />
+                						<ignore></ignore>
                 					</action>
                 				</pluginExecution>
                 				<pluginExecution>
                 					<pluginExecutionFilter>
-                						<groupId>
-                							org.apache.maven.plugins
-                						</groupId>
-                						<artifactId>
-                							maven-pmd-plugin
-                						</artifactId>
-                						<versionRange>
-                							[3.0.1,)
-                						</versionRange>
+                						<groupId>org.apache.maven.plugins</groupId>
+                						<artifactId>maven-pmd-plugin</artifactId>
+                						<versionRange>[3.0.1,)</versionRange>
                 						<goals>
                 							<goal>check</goal>
                 						</goals>
                 					</pluginExecutionFilter>
                 					<action>
-                						<ignore />
+                						<ignore></ignore>
                 					</action>
                 				</pluginExecution>
                 				<pluginExecution>
                 					<pluginExecutionFilter>
-                						<groupId>
-                							org.apache.maven.plugins
-                						</groupId>
-                						<artifactId>
-                							maven-remote-resources-plugin
-                						</artifactId>
-                						<versionRange>
-                							[1.0.0,)
-                						</versionRange>
+                						<groupId>org.apache.maven.plugins</groupId>
+                						<artifactId>maven-remote-resources-plugin</artifactId>
+                						<versionRange>[1.0.0,)</versionRange>
                 						<goals>
                 							<goal>process</goal>
                 						</goals>
                 					</pluginExecutionFilter>
                 					<action>
-                						<ignore />
+                						<ignore></ignore>
                 					</action>
                 				</pluginExecution>
                 			</pluginExecutions>
@@ -619,4 +603,7 @@
     </profiles>
 
 </project>
+<!--
+Modified by POM Manipulation Extension for Maven 3.7-SNAPSHOT ( SHA: 894f17a6 ) 
+-->
 
