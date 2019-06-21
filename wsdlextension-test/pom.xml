@@ -27,7 +27,7 @@
     <parent>
         <groupId>org.apache.cxf.xjc-utils</groupId>
         <artifactId>xjc-utils</artifactId>
-        <version>3.2.4.fuse-740013</version>
+        <version>3.2.4.fuse-740013-redhat-00001</version>
     </parent>
 
     <dependencies>
