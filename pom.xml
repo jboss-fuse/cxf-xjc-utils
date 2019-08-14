@@ -83,7 +83,14 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
-        </repository> 
+        </repository>
+        <repository>
+            <id>redhat.earlyaccess</id>
+            <url>https://maven.repository.redhat.com/earlyaccess</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
     </repositories>
     <dependencyManagement>
         <dependencies>
