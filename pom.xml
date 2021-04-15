@@ -21,7 +21,7 @@
     <groupId>org.apache.cxf.xjc-utils</groupId>
     <artifactId>xjc-utils</artifactId>
     <packaging>pom</packaging>
-    <version>3.3.1.redhat-SNAPSHOT</version>
+    <version>3.3.1.fuse-790021</version>
     <name>Apache CXF XJC Utils</name>
     <url>https://cxf.apache.org</url>
 
