@@ -72,26 +72,6 @@
         <module>javadoc</module>
         <module>runtime</module>
     </modules>
-    <repositories>
-         <repository>
-             <id>apache.snapshots</id>
-             <url>https://repository.apache.org/snapshots/</url>
-             <name>Apache Snapshot Repo</name>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>redhat.earlyaccess</id>
-            <url>https://maven.repository.redhat.com/earlyaccess</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -112,27 +92,27 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>4.12.0.redhat-003</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-plugin-api</artifactId>
-                <version>3.3.3</version>
+                <version>3.3.3.redhat-1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-core</artifactId>
-                <version>3.3.3</version>
+                <version>3.3.3.redhat-1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-compat</artifactId>
-                <version>3.3.3</version>
+                <version>3.3.3.redhat-1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.12.0</version>
+                <version>3.12.0.redhat-00001</version>
             </dependency>
             <dependency>
                 <groupId>wsdl4j</groupId>
@@ -143,12 +123,12 @@
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>2.11.0</version>
+                <version>2.11.0.redhat-00001</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
-                <version>1.21</version>
+                <version>1.21.0.redhat-00001</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -343,7 +323,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-plugin-plugin</artifactId>
-                    <version>3.6.0</version>
+                    <version>3.6.0.redhat-00002</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
