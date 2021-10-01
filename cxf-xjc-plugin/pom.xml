@@ -48,7 +48,7 @@
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-utils</artifactId>
-            <version>3.0.24</version>
+            <version>3.0.24.redhat-1</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
@@ -96,7 +96,7 @@
         <dependency>
             <groupId>xml-resolver</groupId>
             <artifactId>xml-resolver</artifactId>
-            <version>1.2</version>
+            <version>1.2.0.redhat-12</version>
         </dependency>
         <dependency>
             <groupId>org.javassist</groupId>
