@@ -46,9 +46,8 @@
     <properties>
         <cxf-buildtools-version>3.4.4</cxf-buildtools-version>
         <jdk.version>1.8</jdk.version>
-        <jaxb-version>2.3.3.redhat-00001</jaxb-version>
-        <glassfish-jaxb-version>2.3.7</glassfish-jaxb-version>
-
+        <jaxb-version>2.3.4</jaxb-version>
+        <jaxb-api-version>2.3.3.redhat-00001</jaxb-api-version>
         <eclipse.outputDirectory>${basedir}/target/classes</eclipse.outputDirectory>
         <downloadSources>true</downloadSources>
 
@@ -78,17 +77,17 @@
             <dependency>
                 <groupId>jakarta.xml.bind</groupId>
                 <artifactId>jakarta.xml.bind-api</artifactId>
-                <version>${jaxb-version}</version>
+                <version>${jaxb-api-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
-                <version>${glassfish-jaxb-version}</version>
+                <version>${jaxb-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jaxb</groupId>
                 <artifactId>jaxb-xjc</artifactId>
-                <version>${glassfish-jaxb-version}</version>
+                <version>${jaxb-version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
